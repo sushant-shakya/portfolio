@@ -1,12 +1,12 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
-    Atom,
-    Figma,
-    FileCode,
-    Palette,
-    Server,
-    Wind
+  Atom,
+  Figma,
+  FileCode,
+  Palette,
+  Server,
+  Wind
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -17,15 +17,16 @@ interface Skill {
   level: number;
   icon: React.ReactNode;
   color: string;
+
 }
 
 const skills: Skill[] = [
-  { name: 'React.js', level: 85, icon: <Atom className="w-5 h-5" />, color: 'indigo' },
-  { name: 'JavaScript / TS', level: 80, icon: <FileCode className="w-5 h-5" />, color: 'blue' },
-  { name: 'UI/UX Design', level: 75, icon: <Palette className="w-5 h-5" />, color: 'coral' },
-  { name: 'Tailwind CSS', level: 90, icon: <Wind className="w-5 h-5" />, color: 'teal' },
-  { name: 'Figma', level: 70, icon: <Figma className="w-5 h-5" />, color: 'purple' },
-  { name: 'Git & Version Control', level: 75, icon: <Server className="w-5 h-5" />, color: 'green' },
+  { name: 'React.js', level: 60, icon: <Atom className="w-5 h-5" />, color: 'indigo' },
+  { name: 'JavaScript / TS', level: 70, icon: <FileCode className="w-5 h-5" />, color: 'blue' },
+  { name: 'UI/UX Design', level: 80, icon: <Palette className="w-5 h-5" />, color: 'coral' },
+  { name: 'Tailwind CSS', level: 75, icon: <Wind className="w-5 h-5" />, color: 'teal' },
+  { name: 'Figma', level: 85, icon: <Figma className="w-5 h-5" />, color: 'purple' },
+  { name: 'Git & Version Control', level: 85, icon: <Server className="w-5 h-5" />, color: 'green' },
 ];
 
 const SkillBar = ({ skill, index, isVisible }: { skill: Skill; index: number; isVisible: boolean }) => {
