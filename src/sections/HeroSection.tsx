@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowDown, ArrowRight, Sparkles } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +78,7 @@ const HeroSection = () => {
         <div className="absolute top-20 left-10 w-20 h-20 bg-indigo/10 rounded-full blur-xl animate-float" />
         <div className="absolute top-40 right-20 w-32 h-32 bg-teal/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '1s' }} />
         <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-coral/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }} />
-        
+
         {/* Gradient orbs */}
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-indigo/20 to-purple-500/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-20 w-80 h-80 bg-gradient-to-tr from-teal/20 to-cyan-500/10 rounded-full blur-3xl" />
@@ -94,7 +94,7 @@ const HeroSection = () => {
                 UI / Frontend Developer
               </span>
             </div>
-            
+
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-dark leading-[1.1] tracking-tight mb-6">
               Crafting
               <br />
@@ -102,12 +102,12 @@ const HeroSection = () => {
               <br />
               Experiences
             </h1>
-            
+
             <p className="font-sans text-base lg:text-lg text-gray-primary max-w-md mb-8 leading-relaxed">
-              I design and build beautiful, functional web interfaces that users love. 
+              I design and build beautiful, functional web interfaces that users love.
               Based in Patan, Nepal.
             </p>
-            
+
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={scrollToProjects}
@@ -117,7 +117,7 @@ const HeroSection = () => {
                 View My Work
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </button>
-              
+
               <button
                 onClick={scrollToContact}
                 className="btn-secondary"
@@ -132,15 +132,15 @@ const HeroSection = () => {
             <div className="relative">
               {/* Gradient border effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo via-teal to-coral rounded-3xl blur-lg opacity-50" />
-              
+
               <div className="relative w-64 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[480px] rounded-2xl overflow-hidden shadow-soft-lg">
                 <img
-                  src="/hero-portrait-color.jpg"
+                  src="/hero-portrait-color.jpeg"
                   alt="Sushant Shakya"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Decorative Elements */}
               <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-indigo to-indigo-600 rounded-2xl -z-10 animate-float" />
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-teal to-teal-500 rounded-xl -z-10 animate-float" style={{ animationDelay: '1s' }} />
