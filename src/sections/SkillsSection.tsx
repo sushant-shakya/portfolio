@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Atom, 
-  FileCode, 
-  Palette, 
-  Wind, 
-  Figma, 
-  Server 
+import {
+    Atom,
+    Figma,
+    FileCode,
+    Palette,
+    Server,
+    Wind
 } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,12 +20,12 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: 'React / Next.js', level: 90, icon: <Atom className="w-5 h-5" />, color: 'indigo' },
-  { name: 'TypeScript', level: 85, icon: <FileCode className="w-5 h-5" />, color: 'blue' },
-  { name: 'UI/UX Design', level: 88, icon: <Palette className="w-5 h-5" />, color: 'coral' },
-  { name: 'Tailwind CSS', level: 92, icon: <Wind className="w-5 h-5" />, color: 'teal' },
-  { name: 'Figma', level: 85, icon: <Figma className="w-5 h-5" />, color: 'purple' },
-  { name: 'Node.js', level: 75, icon: <Server className="w-5 h-5" />, color: 'green' },
+  { name: 'React.js', level: 85, icon: <Atom className="w-5 h-5" />, color: 'indigo' },
+  { name: 'JavaScript / TS', level: 80, icon: <FileCode className="w-5 h-5" />, color: 'blue' },
+  { name: 'UI/UX Design', level: 75, icon: <Palette className="w-5 h-5" />, color: 'coral' },
+  { name: 'Tailwind CSS', level: 90, icon: <Wind className="w-5 h-5" />, color: 'teal' },
+  { name: 'Figma', level: 70, icon: <Figma className="w-5 h-5" />, color: 'purple' },
+  { name: 'Git & Version Control', level: 75, icon: <Server className="w-5 h-5" />, color: 'green' },
 ];
 
 const SkillBar = ({ skill, index, isVisible }: { skill: Skill; index: number; isVisible: boolean }) => {
@@ -128,9 +128,9 @@ const SkillsSection = () => {
   }, []);
 
   const categories = [
-    { title: 'Frontend', skills: 'React, Next.js, TypeScript, Tailwind CSS, JavaScript, HTML/CSS', color: 'indigo' },
-    { title: 'Design', skills: 'Figma, Adobe XD, Photoshop, Illustrator, UI/UX, Prototyping', color: 'coral' },
-    { title: 'Other', skills: 'Git, WordPress, PHP, jQuery, Responsive Design, Accessibility', color: 'teal' },
+    { title: 'Development', skills: 'React, Vite, JavaScript, TypeScript, Tailwind CSS, HTML/CSS', color: 'indigo' },
+    { title: 'Design', skills: 'Figma, Visual Design, Typography, Color Theory, Prototyping', color: 'coral' },
+    { title: 'Foundations', skills: 'Data Structures, Git/GitHub, DSA, Clean Code, Problem Solving', color: 'teal' },
   ];
 
   return (
@@ -141,15 +141,15 @@ const SkillsSection = () => {
     >
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-r from-indigo/5 to-transparent rounded-full blur-3xl -translate-y-1/2 pointer-events-none" />
-      
+
       <div className="container-max relative z-10">
         {/* Heading */}
         <div ref={headingRef} className="mb-12 lg:mb-16 text-center">
           <span className="font-mono text-xs uppercase tracking-widest text-indigo mb-4 block">
-            Expertise
+            Future-Ready
           </span>
           <h2 className="font-heading font-semibold text-3xl md:text-4xl lg:text-5xl text-dark">
-            Skills & <span className="gradient-text">Expertise</span>
+            Skills & <span className="gradient-text">Growth</span>
           </h2>
         </div>
 
