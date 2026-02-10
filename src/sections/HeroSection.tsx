@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
   const decorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,18 +26,7 @@ const HeroSection = () => {
         }
       );
 
-      // Image animation
-      gsap.fromTo(
-        imageRef.current,
-        { opacity: 0, scale: 0.95 },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          ease: 'power2.out',
-          delay: 0.4,
-        }
-      );
+
 
       // Decorative elements animation
       gsap.fromTo(
@@ -85,11 +73,11 @@ const HeroSection = () => {
       </div>
 
       <div className="container-max w-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="flex flex-col items-center text-center">
           {/* Content */}
-          <div ref={contentRef} className="order-2 lg:order-1">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-8 h-[2px] bg-gradient-primary" />
+          <div ref={contentRef} className="max-w-3xl">
+            <div className="flex flex-col items-center gap-2 mb-6">
+              <span className="w-12 h-[2px] bg-gradient-primary" />
               <span className="font-mono text-xs uppercase tracking-widest text-indigo">
                 Student & Frontend Developer
               </span>
@@ -103,12 +91,12 @@ const HeroSection = () => {
               Experiences
             </h1>
 
-            <p className="font-sans text-base lg:text-lg text-gray-primary max-w-md mb-8 leading-relaxed">
+            <p className="font-sans text-base lg:text-lg text-gray-primary mx-auto mb-8 leading-relaxed">
               I design and build beautiful, functional web interfaces that users love.
               Based in Patan, Nepal.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <button
                 onClick={scrollToProjects}
                 className="btn-primary group"
@@ -124,27 +112,6 @@ const HeroSection = () => {
               >
                 Get in Touch
               </button>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div ref={imageRef} className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Gradient border effect */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-indigo via-teal to-coral rounded-3xl blur-lg opacity-50" />
-
-              <div className="relative w-64 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[480px] rounded-2xl overflow-hidden shadow-soft-lg">
-                <img
-                  src="/hero-portrait-color.jpeg"
-                  alt="Sushant Shakya"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Decorative Elements */}
-              <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-br from-indigo to-indigo-600 rounded-2xl -z-10 animate-float" />
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-teal to-teal-500 rounded-xl -z-10 animate-float" style={{ animationDelay: '1s' }} />
-              <div className="absolute top-1/2 -right-8 w-12 h-12 bg-gradient-to-br from-coral to-orange-500 rounded-lg -z-10 animate-float" style={{ animationDelay: '2s' }} />
             </div>
           </div>
         </div>

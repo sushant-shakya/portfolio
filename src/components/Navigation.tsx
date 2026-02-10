@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +43,7 @@ const Navigation = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="font-heading font-semibold text-lg text-dark tracking-tight hover:text-indigo transition-colors"
           >
-            Sushant<span className="text-indigo">.</span>
+            Sushant <span className="text-indigo">.</span>
           </button>
 
           {/* Desktop Nav */}

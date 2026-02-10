@@ -1,15 +1,13 @@
-import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Github, Linkedin, Dribbble, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
-  { icon: <Github className="w-5 h-5" />, label: 'GitHub', href: '#', color: 'hover:bg-indigo hover:text-white' },
-  { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn', href: '#', color: 'hover:bg-teal hover:text-white' },
-  { icon: <Dribbble className="w-5 h-5" />, label: 'Dribbble', href: '#', color: 'hover:bg-coral hover:text-white' },
-  { icon: <Twitter className="w-5 h-5" />, label: 'Twitter', href: '#', color: 'hover:bg-blue-400 hover:text-white' },
+  { icon: <Github className="w-5 h-5" />, label: 'GitHub', href: 'https://github.com/sushant-shakya', color: 'hover:bg-indigo hover:text-white' },
+  { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/sushant-shakya-a851ab259?utm_source=share_via&utm_content=profile&utm_medium=member_android', color: 'hover:bg-teal hover:text-white' },
 ];
 
 const navLinks = [
@@ -61,13 +59,13 @@ const FooterSection = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-teal/10 rounded-full blur-3xl" />
       </div>
-      
+
       <div ref={contentRef} className="container-max relative z-10">
         <div className="grid md:grid-cols-3 gap-12 lg:gap-16 mb-12 lg:mb-16">
           {/* Logo & Tagline */}
           <div>
             <h3 className="font-heading font-semibold text-2xl mb-4">
-              Sushant<span className="text-indigo">.</span>
+              Sushant <span className="text-indigo">Shakya</span>
             </h3>
             <p className="font-sans text-sm text-white/60 leading-relaxed">
               UI/Frontend Developer crafting digital experiences with passion and precision.
@@ -123,9 +121,7 @@ const FooterSection = () => {
           <p className="font-sans text-xs text-white/40">
             © 2026 Sushant Shakya. All rights reserved.
           </p>
-          <p className="font-sans text-xs text-white/40 flex items-center gap-1">
-            Made with <Heart className="w-3 h-3 text-coral fill-coral" /> in Nepal
-          </p>
+
         </div>
       </div>
     </footer>

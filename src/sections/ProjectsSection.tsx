@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,23 +19,23 @@ const projects: Project[] = [
     title: 'National Cancer Hospital',
     category: 'Website / UI',
     description: 'A modern healthcare website designed to provide patients with easy access to information and services.',
-    image: '/project-cancer-new.jpg',
+    image: '/projects/national-hospital-mockup.png',
     link: 'https://nationalcancerhospital.com',
     color: 'indigo',
   },
   {
     title: 'Marque Marketing',
-    category: 'Web Design',
+    category: 'Web Site / UI',
     description: 'Digital marketing agency website with bold visual identity and engaging user experience.',
-    image: '/project-marque-new.jpg',
+    image: '/projects/marque-mockup.png',
     link: 'https://marquemarketing.com.np',
     color: 'coral',
   },
   {
     title: 'Shakya Dynasty',
-    category: 'Brand + Web',
+    category: 'Web Site',
     description: 'Cultural heritage brand website showcasing rich history with elegant design.',
-    image: '/project-shakya-new.jpg',
+    image: '/projects/shakya-dynasty-mockup.png',
     link: 'https://shakyadynasty.com',
     color: 'teal',
   },
@@ -111,7 +111,7 @@ const ProjectsSection = () => {
         <div className="absolute top-20 right-20 w-64 h-64 bg-indigo/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-coral/5 rounded-full blur-3xl" />
       </div>
-      
+
       <div className="container-max relative z-10">
         {/* Heading */}
         <div ref={headingRef} className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 lg:mb-16">
@@ -150,7 +150,7 @@ const ProjectsSection = () => {
                   />
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
+
                   {/* Arrow Icon */}
                   <div className="absolute bottom-4 right-4 w-12 h-12 bg-white rounded-xl flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
                     <ExternalLink className="w-5 h-5 text-dark" />
