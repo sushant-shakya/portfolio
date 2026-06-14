@@ -15,10 +15,17 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    period: 'Mar 2024 – Present',
-    company: 'Freelance',
-    role: 'Designer / Developer',
-    description: 'Collaborating with product managers and designers to create comprehensive design systems. Designing and developing new user interfaces for web applications.',
+    period: 'Mar 2024 - Present',
+    company: 'The Third Sourcers',
+    role: 'Frontend Engineer',
+    description: 'Developed and maintained responsive web applications across cultural, e-commerce, and healthcare domains, transforming UI/UX designs into high-performance, user-friendly interfaces using modern frontend technologies and clean coding practices.',
+    type: 'work',
+  },
+  {
+    period: 'Mar 2026 – June 2026',
+    company: 'Letitu Corp',
+    role: 'UI/UX Design',
+    description: 'Designed and maintained intuitive UI/UX for an AI-powered education platform, creating user-centered experiences using Figma and modern design practices to enhance usability, accessibility, and engagement across web and mobile applications.',
     type: 'work',
   },
   {
@@ -145,7 +152,7 @@ const ExperienceSection = () => {
     >
       {/* Background decoration */}
       <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-teal/5 to-transparent pointer-events-none" />
-      
+
       <div className="container-max relative z-10">
         {/* Heading */}
         <div ref={headingRef} className="mb-12 lg:mb-16 text-center">
@@ -172,9 +179,8 @@ const ExperienceSection = () => {
               <div
                 key={index}
                 ref={(el) => { itemsRef.current[index] = el; }}
-                className={`relative flex flex-col md:flex-row gap-6 md:gap-12 ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                }`}
+                className={`relative flex flex-col md:flex-row gap-6 md:gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  }`}
               >
                 {/* Timeline Dot */}
                 <div className="hidden md:block absolute left-1/2 top-3 w-4 h-4 rounded-full -translate-x-1/2 border-4 border-white shadow-md z-10"
